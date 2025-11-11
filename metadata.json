@@ -1,0 +1,5 @@
+{
+  "name": "Salience Field Physics Explorer",
+  "description": "An interactive dashboard to analyze, classify, and predict salience field patterns based on real field data, exploring analogies to complex physical phenomena.",
+  "requestFramePermissions": []
+}
