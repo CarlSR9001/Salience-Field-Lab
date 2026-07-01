@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Salience Field Physics Explorer
 
-# Run and deploy your AI Studio app
+An interactive React/Vite dashboard for probing **salience-field patterns** in a
+novelty–momentum phase space, and exploring analogies between those patterns and
+physical phenomena. Built from real field data (`data.ts` / the bundled profile JSON).
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1SU81YmtgAssXUJUOW80Njuueb7xVooNP
+- **Phase-space canvas** — plot and explore salience modes across novelty vs. momentum.
+- **Instrument panel** — probe arbitrary points and pin modes for comparison.
+- **Physics prediction** — `services/physicsService` maps probe parameters to predicted
+  field behavior.
+- **AI collaborator** — an optional assistant panel for interpreting patterns.
 
-## Run Locally
+## Run locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+```bash
+npm install
+# the AI collaborator uses the Gemini API — set your own key:
+echo "GEMINI_API_KEY=your_key_here" > .env.local
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The app runs without a key; only the AI-collaborator panel requires one. No key is
+bundled in this repo.
+
+## Status
+
+An exploratory visualization tool for the broader salience research line — a way to
+*see* and interrogate salience-field structure, not a validated physical model.
